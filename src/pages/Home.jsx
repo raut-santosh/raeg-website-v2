@@ -1,74 +1,24 @@
 import React, { useEffect } from 'react'
-import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
+import ApiService from '../services/ApiService';
+
+const apiUrl = process.env.apiUrl;
+const apiService = new ApiService(apiUrl);
+
 function Home() {
     
+
     useEffect(() => {
-        
-        // Initialize gallery swiper sliders
-        const gallerySwipers = document.querySelectorAll('.gallery-active');
-        gallerySwipers.forEach((container, index) => {
-            container.classList.add('swiper-slider-' + index);
 
-            const dragSize = container.dataset.dragSize || 200;
-            const freeMode = container.dataset.freeMode === 'true';
-            const loop = container.dataset.loop !== 'false';
-            const slidesDesktop = parseInt(container.dataset.slidesDesktop) || 1;
-            const slidesTablet = parseInt(container.dataset.slidesTablet) || 1;
-            const slidesMobile = parseInt(container.dataset.slidesMobile) || 1;
-            const spaceBetween = parseInt(container.dataset.spaceBetween) || 1;
+        const script = document.createElement("script");
+        script.src = "/assets/js/main.js"; // Path to your JavaScript file
+        script.async = true;
 
-            new Swiper('.swiper-slider-' + index, {
-                direction: 'horizontal',
-                loop: loop,
-                freeMode: freeMode,
-                centeredSlides: true,
-                spaceBetween: spaceBetween,
-                observer: true,
-                observeParents: true,
-                breakpoints: {
-                    1920: { slidesPerView: slidesDesktop },
-                    992: { slidesPerView: slidesTablet },
-                    320: { slidesPerView: slidesMobile },
-                },
-                navigation: {
-                    nextEl: `.gallery-slider-button-next-${index}`,
-                    prevEl: `.gallery-slider-button-prev-${index}`,
-                },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    draggable: true,
-                    dragSize: dragSize,
-                },
-            });
-        });
+        document.body.appendChild(script);
 
-        // Initialize trending NFT swiper
-        const trendSwiper = new Swiper('.trendingNft-active', {
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            breakpoints: {
-                1500: { slidesPerView: 3 },
-                1200: { slidesPerView: 3 },
-                992: { slidesPerView: 2 },
-                768: { slidesPerView: 2 },
-                576: { slidesPerView: 1 },
-                0: { slidesPerView: 1 },
-            },
-            navigation: {
-                nextEl: '.trend-slider-button-next',
-                prevEl: '.trend-slider-button-prev',
-            },
-        });
-
-        // Cleanup function to destroy Swiper instances on component unmount
+        // Clean up by removing the script when component unmounts
         return () => {
-            gallerySwipers.forEach((container) => {
-                const swiperInstance = container.swiper;
-                if (swiperInstance) swiperInstance.destroy(true, true);
-            });
-            if (trendSwiper) trendSwiper.destroy(true, true);
+            document.body.removeChild(script);
         };
     }, []);
 

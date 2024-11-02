@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import 'swiper/swiper-bundle.css';
 import ApiService from '../services/ApiService';
 
-const apiUrl = process.env.apiUrl;
-const apiService = new ApiService(apiUrl);
+// const apiUrl = process.env.apiUrl;
+// const apiService = new ApiService(apiUrl);
 
 function Home() {
     

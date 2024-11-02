@@ -33,7 +33,7 @@ const Header = () => {
                                     <ul className="list-wrap">
                                         <li className="search"><a href="#"><i className="flaticon-search-1"></i></a></li>
                                         <li className="header-btn">
-                                            <a href="login.html" className="tg-border-btn">
+                                            <Link to="/login" className="tg-border-btn">
                                                 <svg preserveAspectRatio="none" viewBox="0 0 157 48" fill="none">
                                                     <path fillRule="evenodd" clipRule="evenodd" d="M131.75 2L155.75 25L131.75 47L148.75 24L131.75 2Z" fill="currentColor"></path>
                                                     <path fillRule="evenodd" clipRule="evenodd" d="M25 1L1 24.5111L25 47L8 23.4889L25 1Z" fill="currentColor"></path>
@@ -41,7 +41,7 @@ const Header = () => {
                                                 </svg>
                                                 <i className="flaticon-edit"></i>
                                                 ~sing in
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="side-toggle-icon">
                                             <span></span>

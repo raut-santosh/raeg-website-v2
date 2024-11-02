@@ -1,6 +1,6 @@
 // axiosInstance.js
 import axios from 'axios';
-// localStorage.setItem('token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI5MzQ4ZTdlLTIzMWItNDdhNS04MDc2LWNmMzcwZDkyOTU1MiIsInJvbGUiOiJhNmRiNmIzOS01YWQzLTQ2YWEtYWUyZi02Mjk3MzgxNDEzMzEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTczMDQ3NTE1OCwiZXhwIjoxNzMwNTYxNTU4LCJpc3MiOiJkaXJlY3R1cyJ9.LvUOApYMwz0Bim6w28ZjnY7yJ5JxAB2YHMtj3Z0p-Rg")
+
 // Create an Axios instance
 const axiosInstance = axios.create({
   baseURL: process.env.apiUrl, // Set your API base URL here
@@ -10,8 +10,11 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     // Get the token from local storage
-    const token = localStorage.getItem('token');
+    const currentUserString = localStorage.getItem('currentUser');
+    const currentUser = currentUserString ? JSON.parse(currentUserString) : null; 
 
+
+    let token = currentUser.session.access_token;
     // If the token exists, set the Authorization header
     if (token) {
       config.headers['Authorization'] = `Bearer ${token}`;

@@ -14,6 +14,7 @@ export const UserProvider = ({ children }) => {
   // Effect to synchronize currentUser with localStorage
   useEffect(() => {
     if (currentUser) {
+      console.log('Current user updated: ', currentUser)
       localStorage.setItem('currentUser', JSON.stringify(currentUser)); // Store user in local storage
     } else {
       localStorage.removeItem('currentUser'); // Clear from local storage if user is logged out

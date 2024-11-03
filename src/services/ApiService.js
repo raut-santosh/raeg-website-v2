@@ -115,7 +115,7 @@ class ApiService {
                 //     // If there's an access token, update the user in context
                 //     this.setUser({ session: res.data });
                 // }
-                return res.data.data; // Return the response data
+                return res.data; // Return the response data
             })
             .catch(error => {
                 console.error('Authentication error:', error);

@@ -66,7 +66,7 @@ function Contact() {
                                 </div>
                                 <button className="submit-btn">Submit Now</button>
                             </form>
-                            <p className="ajax-response"></p>
+                            <p className="response-msg"></p>
                         </div>
                     </div>
                 </div>

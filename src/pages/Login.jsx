@@ -27,12 +27,12 @@ function Login() {
         e.preventDefault();
         try {
             const response = await apiService.auth('login', model)
-            if (response.access_token) {
-                localStorage.setItem('currentUser', JSON.stringify({session:response}))
+            if (response.data.access_token) {
+                localStorage.setItem('currentUser', JSON.stringify({session:response.data}))
                 const user = await apiService.get('/users/me')
-                setCurrentUser({ ...user.data, session: response });
+                setCurrentUser({ ...user.data, session: response.data });
+                navigate('/')
             }
-            navigate('/')
         } catch (err) {
             console.error('Login failed:', err);
         }
@@ -84,7 +84,7 @@ function Login() {
                                     </div>
                                     <button className="submit-btn" type='submit'>Login</button>
                                 </form>
-                                <p className="ajax-response"></p>
+                                <p className="response-msg"></p>
                             </div>
                         </div>
                     </div>

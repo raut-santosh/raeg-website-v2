@@ -9313,16 +9313,16 @@ blockquote p {
 .contact__form-wrap .submit-btn:hover {
   background: var(--tg-theme-secondary);
 }
-.contact__form-wrap .ajax-response {
+.contact__form-wrap .response-msg {
   margin: 0 0;
 }
-.contact__form-wrap .ajax-response.error, .contact__form-wrap .ajax-response.success {
+.contact__form-wrap .response-msg.error, .contact__form-wrap .response-msg.success {
   margin-top: 15px;
 }
-.contact__form-wrap .ajax-response.error {
+.contact__form-wrap .response-msg.error {
   color: var(--tg-theme-secondary);
 }
-.contact__form-wrap .ajax-response.success {
+.contact__form-wrap .response-msg.success {
   color: var(--tg-theme-primary);
 }
 .contact-map iframe {

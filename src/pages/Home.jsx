@@ -1,24 +1,49 @@
 import React, { useEffect, useState } from 'react'
 import 'swiper/swiper-bundle.css';
 import ApiService from '../services/ApiService';
-import { useLoader } from '../contexts/LoaderContext';
+// import { useLoader } from '../contexts/LoaderContext';
+import { Link } from 'react-router-dom';
 
-// const apiUrl = process.env.apiUrl;
-// const apiService = new ApiService(apiUrl);
+const apiService = new ApiService();
+const apiUrl = process.env.apiUrl;
 
 function Home() {
-    const { showLoader, hideLoader } = useLoader();
-
-    
+    // const { showLoader, hideLoader } = useLoader();
+    const [members, setMembers] = useState([]);
+    const [games, setGames] = useState([]);
+    const [contests, setContests] = useState([]);
 
     useEffect(() => {
-        showLoader()
+        
+
+        const getMembers = async () => {
+            const response = await apiService.get('members')
+            setMembers(response.data)
+            console.log('members: ', response.data)
+        }
+
+        const getGames = async () => {
+            const response = await apiService.get('games')
+            setGames(response.data)
+            console.log('games: ', response.data)
+        }
+
+        const getContests = async () => {
+            const response = await apiService.get('contests')
+            setContests(response.data)
+            console.log('contests: ', response.data)
+        }
+
+        getMembers()
+        getGames()
+        getContests()
+
         const script = document.createElement("script");
         script.src = "/assets/js/main.js"; // Path to your JavaScript file
         script.async = true;
 
         document.body.appendChild(script);
-        hideLoader();
+
         // Clean up by removing the script when component unmounts
         return () => {
             document.body.removeChild(script);
@@ -76,81 +101,23 @@ function Home() {
             <section className="nft-item__area">
                 <div className="container custom-container">
                     <div className="row justify-content-center">
-                        <div className="col-xxl-4 col-xl-5 col-lg-6 col-md-9">
-                            <div className="nft-item__box">
-                                <div className="nft-item__thumb">
-                                    <a href="shop-details.html"><img src="assets/img/nft/nft_img01.jpg" alt="img" /></a>
-                                </div>
-                                <div className="nft-item__content">
-                                    <h4 className="title"><a href="shop-details.html">wolf gaming art</a></h4>
-                                    <div className="nft-item__avatar">
-                                        <div className="avatar-img">
-                                            <a href="shop-details.html"><img src="assets/img/nft/nft_avatar.png" alt="img" /></a>
-                                        </div>
-                                        <div className="avatar-name">
-                                            <h5 className="name"><a href="shop-details.html">Alax Max</a></h5>
-                                            <span className="designation">Creator</span>
-                                        </div>
+                        {games.map((game) => (
+                            <div key={game.id} className="col-xxl-4 col-xl-5 col-lg-6 col-md-9">
+                                <div className="nft-item__box">
+                                    <div className="nft-item__thumb">
+                                        <Link to={apiUrl+'/assets/'+game.image}><img src={apiUrl+'/assets/'+game.image+'?fit=cover&width=187&height=191&quality=80'} alt="img" /></Link>
                                     </div>
-                                    <div className="nft-item__bid">
-                                        <div className="nft-item__price">
-                                            <p>1.002 <span className="currency">Eth</span></p>
-                                            <a href="shop-details.html" className="bid-btn">Bid <i className="fas fa-long-arrow-alt-right"></i></a>
+                                    <div className="nft-item__content">
+                                        <h4 className="title"><Link to={'/tournaments/' + game.id}>{game.name}</Link></h4>
+                                        <div className="nft-item__bid">
+                                            <div className="nft-item__price">
+                                                <Link to={'/tournaments/' + game.id} className="bid-btn">Join Tournaments <i className="fas fa-long-arrow-alt-right"></i></Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-xxl-4 col-xl-5 col-lg-6 col-md-9">
-                            <div className="nft-item__box">
-                                <div className="nft-item__thumb">
-                                    <a href="shop-details.html"><img src="assets/img/nft/nft_img02.jpg" alt="img" /></a>
-                                </div>
-                                <div className="nft-item__content">
-                                    <h4 className="title"><a href="shop-details.html">Forest Princess</a></h4>
-                                    <div className="nft-item__avatar">
-                                        <div className="avatar-img">
-                                            <a href="shop-details.html"><img src="assets/img/nft/nft_avatar.png" alt="img" /></a>
-                                        </div>
-                                        <div className="avatar-name">
-                                            <h5 className="name"><a href="shop-details.html">Alax Max</a></h5>
-                                            <span className="designation">Creator</span>
-                                        </div>
-                                    </div>
-                                    <div className="nft-item__bid">
-                                        <div className="nft-item__price">
-                                            <p>1.053 <span className="currency">Eth</span></p>
-                                            <a href="shop-details.html" className="bid-btn">Bid <i className="fas fa-long-arrow-alt-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xxl-4 col-xl-5 col-lg-6 col-md-9">
-                            <div className="nft-item__box">
-                                <div className="nft-item__thumb">
-                                    <a href="shop-details.html"><img src="assets/img/nft/nft_img03.jpg" alt="img" /></a>
-                                </div>
-                                <div className="nft-item__content">
-                                    <h4 className="title"><a href="shop-details.html">girl firefly art</a></h4>
-                                    <div className="nft-item__avatar">
-                                        <div className="avatar-img">
-                                            <a href="shop-details.html"><img src="assets/img/nft/nft_avatar.png" alt="img" /></a>
-                                        </div>
-                                        <div className="avatar-name">
-                                            <h5 className="name"><a href="shop-details.html">Alax Max</a></h5>
-                                            <span className="designation">Creator</span>
-                                        </div>
-                                    </div>
-                                    <div className="nft-item__bid">
-                                        <div className="nft-item__price">
-                                            <p>1.024 <span className="currency">Eth</span></p>
-                                            <a href="shop-details.html" className="bid-btn">Bid <i className="fas fa-long-arrow-alt-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>

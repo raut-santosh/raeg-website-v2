@@ -1,6 +1,21 @@
 import React from 'react'
+import ApiService from '../services/ApiService'
+import { Link } from 'react-router-dom';
+
+const apiService = new ApiService()
 
 function Register() {
+    const [formData, setFormData] = React.useState({});
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevFormData) => ({...prevFormData, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+    }
     return (
         <main className="main--area">
 
@@ -32,20 +47,40 @@ function Register() {
                     <div className="row justify-content-center">
                         <div className="col-lg-6 col-md-10">
                             <div className="contact__form-wrap">
-                                <form id="contact-form" action="assets/mail.php" method="POST">
+                                <form id="contact-form">
                                     <div className="row">
-                                        <div className="col-sm-6 col-md-12 col-lg-12">
+                                        <div className="col-sm-12 col-md-6 col-lg-6">
                                             <div className="input-grp">
-                                                <input type="text" placeholder="Email *" required />
+                                                <input type="text" placeholder="First Name *" required />
                                             </div>
                                         </div>
-                                        <div className="col-sm-6 col-md-12 col-lg-12">
+                                        <div className="col-sm-12 col-md-6 col-lg-6">
+                                            <div className="input-grp">
+                                                <input type="text" placeholder="Last Name *" required />
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-12 col-md-6 col-lg-6">
+                                            <div className="input-grp">
+                                                <input type="text" placeholder="Location" />
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-12 col-md-6 col-lg-6">
+                                            <div className="input-grp">
+                                                <input type="text" placeholder="Mobile *" />
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-12 col-md-6 col-lg-6">
+                                            <div className="input-grp">
+                                                <input type="text" placeholder="Email *" />
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-12 col-md-6 col-lg-6">
                                             <div className="input-grp">
                                                 <input type="password" placeholder="Password *" required />
                                             </div>
                                         </div>
                                     </div>
-                                    <button className="submit-btn">Login</button>
+                                    <button className="submit-btn">Register</button>
                                 </form>
                                 <p className="ajax-response"></p>
                             </div>

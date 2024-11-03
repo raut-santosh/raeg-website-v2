@@ -10,11 +10,14 @@ import News from './pages/News';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import { LoaderProvider } from './contexts/LoaderContext';
+import Loader from './components/Loader';
 
 function App() {
 
   return (
-    <>
+    <LoaderProvider>
+      <Loader />
       <BrowserRouter>
       <Header />
         <Routes>
@@ -29,7 +32,7 @@ function App() {
         </Routes>
       <Footer />
       </BrowserRouter>
-    </>
+    </LoaderProvider>
   )
 }
 

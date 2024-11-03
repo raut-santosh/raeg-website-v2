@@ -71,12 +71,12 @@ function Login() {
                             <div className="contact__form-wrap">
                                 <form id="contact-form" onSubmit={handleSubmit}>
                                     <div className="row">
-                                        <div className="col-sm-6 col-md-12 col-lg-12">
+                                        <div className="col-sm-12 col-md-12 col-lg-12">
                                             <div className="input-grp">
                                                 <input type="text" placeholder="Email *" name="email" value={model.email} onChange={handleChange} required />
                                             </div>
                                         </div>
-                                        <div className="col-sm-6 col-md-12 col-lg-12">
+                                        <div className="col-sm-12 col-md-12 col-lg-12">
                                             <div className="input-grp">
                                                 <input type="password" placeholder="Password *" name="password" value={model.password} onChange={handleChange} required />
                                             </div>

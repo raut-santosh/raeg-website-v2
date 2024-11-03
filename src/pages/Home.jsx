@@ -1,21 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import 'swiper/swiper-bundle.css';
 import ApiService from '../services/ApiService';
+import { useLoader } from '../contexts/LoaderContext';
 
 // const apiUrl = process.env.apiUrl;
 // const apiService = new ApiService(apiUrl);
 
 function Home() {
+    const { showLoader, hideLoader } = useLoader();
+
     
 
     useEffect(() => {
-
+        showLoader()
         const script = document.createElement("script");
         script.src = "/assets/js/main.js"; // Path to your JavaScript file
         script.async = true;
 
         document.body.appendChild(script);
-
+        hideLoader();
         // Clean up by removing the script when component unmounts
         return () => {
             document.body.removeChild(script);
@@ -24,7 +27,6 @@ function Home() {
 
     return (
         <main className="main--area">
-
             {/* <!-- slider-area --> */}
             <section className="slider__area slider__bg" data-background="assets/img/slider/slider_bg.jpg">
                 <div className="slider-activee">

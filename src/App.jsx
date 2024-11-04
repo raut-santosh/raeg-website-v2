@@ -13,6 +13,7 @@ import Register from './pages/Register';
 import { LoaderProvider } from './contexts/LoaderContext';
 import Loader from './components/Loader';
 import TournamentDetails from './pages/TournamentDetails';
+import Profile from './pages/Profile';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       <Footer />
       </BrowserRouter>

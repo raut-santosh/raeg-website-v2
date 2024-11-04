@@ -10,3 +10,11 @@
     color: rgb(241, 74, 74);
     font-size: 14px;
 }
+
+.profile-avatar{
+    border-radius: 110px;
+}
+
+.customer__form-wrap{
+    border: 2px solid #45f882;
+}

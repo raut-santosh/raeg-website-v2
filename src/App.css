@@ -1,0 +1,12 @@
+.btn-otp{
+    background-color: transparent;
+    margin-top: 2px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+}
+
+.error-msg{
+    color: rgb(241, 74, 74);
+    font-size: 14px;
+}

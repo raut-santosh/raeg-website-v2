@@ -1,42 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import 'swiper/swiper-bundle.css';
 import ApiService from '../services/ApiService';
-// import { useLoader } from '../contexts/LoaderContext';
+import { useLoader } from '../contexts/LoaderContext';
 import { Link } from 'react-router-dom';
 
 const apiService = new ApiService();
 const apiUrl = process.env.apiUrl;
 
 function Home() {
-    // const { showLoader, hideLoader } = useLoader();
+    const { showLoader, hideLoader } = useLoader();
     const [members, setMembers] = useState([]);
     const [games, setGames] = useState([]);
     const [contests, setContests] = useState([]);
 
     useEffect(() => {
+        
 
-
-        const getMembers = async () => {
-            const response = await apiService.get('members')
-            setMembers(response.data)
-            console.log('members: ', response.data)
-        }
-
-        const getGames = async () => {
-            const response = await apiService.get('games')
-            setGames(response.data)
-            console.log('games: ', response.data)
-        }
-
-        const getContests = async () => {
-            const response = await apiService.get('contests')
-            setContests(response.data)
-            console.log('contests: ', response.data)
-        }
-
-        getMembers()
-        getGames()
-        getContests()
+        const fetchData = async () => {
+            try {
+                showLoader();
+                // Make each API call and await its completion
+                const membersResponse = await apiService.get('members');
+                setMembers(membersResponse.data);
+    
+                const gamesResponse = await apiService.get('games');
+                setGames(gamesResponse.data);
+    
+                const contestsResponse = await apiService.get('contests');
+                setContests(contestsResponse.data);
+            } catch (error) {
+                console.error("Error fetching data", error);
+            } finally {
+                hideLoader();
+            }
+        };
+    
+        fetchData();
+    
 
         const script = document.createElement("script");
         script.src = "/assets/js/main.js"; // Path to your JavaScript file

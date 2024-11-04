@@ -14,7 +14,7 @@ function Home() {
     const [contests, setContests] = useState([]);
 
     useEffect(() => {
-        
+
 
         const fetchData = async () => {
             try {
@@ -22,10 +22,10 @@ function Home() {
                 // Make each API call and await its completion
                 const membersResponse = await apiService.get('members');
                 setMembers(membersResponse.data);
-    
+
                 const gamesResponse = await apiService.get('games');
                 setGames(gamesResponse.data);
-    
+
                 const contestsResponse = await apiService.get('contests');
                 setContests(contestsResponse.data);
             } catch (error) {
@@ -34,9 +34,9 @@ function Home() {
                 hideLoader();
             }
         };
-    
+
         fetchData();
-    
+
 
         const script = document.createElement("script");
         script.src = "/assets/js/main.js"; // Path to your JavaScript file
@@ -123,17 +123,17 @@ function Home() {
                                     <div className="swiper-container gallery-active">
                                         <div className="swiper-wrapper">
                                             {Array.from({ length: 5 }, (_, index) => (
-                                                <div className="swiper-slide">
-                                                <div className="gallery__item">
-                                                    <div className="gallery__thumb">
-                                                        <a href="assets/img/slider/cs.png" data-cursor="-theme" data-cursor-text="View <br> Image" className="popup-image" title="PUBG Tournament"><img src="assets/img/slider/cs.png" alt="img" /></a>
-                                                    </div>
-                                                    <div className="gallery__content">
-                                                        <h3 className="title">Contests</h3>
-                                                        <span className="rate">rate 50%</span>
+                                                <div key={index} className="swiper-slide">
+                                                    <div className="gallery__item">
+                                                        <div className="gallery__thumb">
+                                                            <a href="assets/img/slider/cs.png" data-cursor="-theme" data-cursor-text="View <br> Image" className="popup-image" title="PUBG Tournament"><img src="assets/img/slider/cs.png" alt="img" /></a>
+                                                        </div>
+                                                        <div className="gallery__content">
+                                                            <h3 className="title">Contests</h3>
+                                                            <span className="rate">rate 50%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             ))}
                                         </div>
                                         {/* <!-- scrollbar --> */}
@@ -162,10 +162,10 @@ function Home() {
                     </div>
                     <div className="row justify-content-center">
                         {members.map(member => (
-                            <div className="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div key={member.id} className="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                                 <div className="team__item">
                                     <div className="team__thumb">
-                                        <a href="team-details.html"><img src={apiUrl+'/assets/'+member.image+ '?fit=cover&width=224&height=224&quality=80'} alt="img" /></a>
+                                        <a href="team-details.html"><img src={apiUrl + '/assets/' + member.image + '?fit=cover&width=224&height=224&quality=80'} alt="img" /></a>
                                     </div>
                                     <div className="team__content">
                                         <h4 className="name"><a href="team-details.html">{member.name}</a></h4>

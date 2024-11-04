@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import { LoaderProvider } from './contexts/LoaderContext';
 import Loader from './components/Loader';
+import TournamentDetails from './pages/TournamentDetails';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/tournaments" element={<Tournaments />} />
+          <Route path="/tournaments/:id" element={<TournamentDetails />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />

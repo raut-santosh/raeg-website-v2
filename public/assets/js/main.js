@@ -510,17 +510,17 @@
     /*==================================
               Button Icon Draw
     ====================================*/
-    var $svgIconBox = $('.tg-svg');
-    $svgIconBox.each(function () {
-        var $this = $(this),
-            $svgIcon = $this.find('.svg-icon'),
-            $id = $svgIcon.attr('id'),
-            $icon = $svgIcon.data('svg-icon');
-        var $vivus = new Vivus($id, { duration: 180, file: $icon });
-        $this.on('mouseenter', function () {
-            $vivus.reset().play();
-        });
-    });
+    // var $svgIconBox = $('.tg-svg');
+    // $svgIconBox.each(function () {
+    //     var $this = $(this),
+    //         $svgIcon = $this.find('.svg-icon'),
+    //         $id = $svgIcon.attr('id'),
+    //         $icon = $svgIcon.data('svg-icon');
+    //     var $vivus = new Vivus($id, { duration: 180, file: $icon });
+    //     $this.on('mouseenter', function () {
+    //         $vivus.reset().play();
+    //     });
+    // });
 
 
     /*=============================================

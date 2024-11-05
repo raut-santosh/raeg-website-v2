@@ -180,171 +180,86 @@ function Home() {
             {/* <!-- team-area-end --> */}
 
 
-            {/* <!-- trending-nft-area --> */}
-            {/* <section className="trendingNft-area section-pt-120 section-pb-90">
-                <div className="container">
-                    <div className="trendingNft__title-wrap">
-                        <div className="row">
-                            <div className="col-md-7">
-                                <div className="trendingNft__title">
-                                    <h2 className="title">top Trending <img src="assets/img/icons/fire.png" width="35" alt="icon" /></h2>
-                                </div>
-                            </div>
-                            <div className="col-md-5">
-                                <div className="trendingNft__nav">
-                                    <button className="slider-button-prev"><i className="fas fa-angle-left"></i></button>
-                                    <button className="slider-button-next"><i className="fas fa-angle-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="swiper-container trendingNft-active">
-                        <div className="swiper-wrapper">
-                            <div className="swiper-slide">
-                                <div className="trendingNft__item">
-                                    <div className="trendingNft__item-top">
-                                        <div className="trendingNft__item-avatar">
-                                            <div className="image">
-                                                <a href="shop-details.html"><img src="assets/img/nft/nft_avatar01.png" alt="img" /></a>
-                                            </div>
-                                            <div className="info">
-                                                <h6 className="name">Crypto Max</h6>
-                                                <a href="shop-details.html" className="userName">@Jon Max</a>
-                                            </div>
-                                        </div>
-                                        <div className="trendingNft__item-wish">
-                                            <a href="#"><i className="far fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trendingNft__item-image">
-                                        <a href="shop-details.html"><img src="assets/img/nft/nft_img04.jpg" alt="img" /></a>
-                                    </div>
-                                    <div className="trendingNft__item-bottom">
-                                        <div className="trendingNft__item-price">
-                                            <span className="bid">Last Bid</span>
-                                            <h6 className="eth"><i className="fab fa-ethereum"></i> 1.002 <span>Eth</span></h6>
-                                        </div>
-                                        <a href="shop-details.html" className="bid-btn">Bid <i className="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="swiper-slide">
-                                <div className="trendingNft__item">
-                                    <div className="trendingNft__item-top">
-                                        <div className="trendingNft__item-avatar">
-                                            <div className="image">
-                                                <a href="shop-details.html"><img src="assets/img/nft/nft_avatar02.png" alt="img" /></a>
-                                            </div>
-                                            <div className="info">
-                                                <h6 className="name">Golden Crypto</h6>
-                                                <a href="shop-details.html" className="userName">@Jon Max</a>
-                                            </div>
-                                        </div>
-                                        <div className="trendingNft__item-wish">
-                                            <a href="shop-details.html"><i className="far fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trendingNft__item-image">
-                                        <a href="shop-details.html"><img src="assets/img/nft/nft_img05.jpg" alt="img" /></a>
-                                    </div>
-                                    <div className="trendingNft__item-bottom">
-                                        <div className="trendingNft__item-price">
-                                            <span className="bid">Last Bid</span>
-                                            <h6 className="eth"><i className="fab fa-ethereum"></i> 1.004 <span>Eth</span></h6>
-                                        </div>
-                                        <a href="shop-details.html" className="bid-btn">Bid <i className="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="swiper-slide">
-                                <div className="trendingNft__item">
-                                    <div className="trendingNft__item-top">
-                                        <div className="trendingNft__item-avatar">
-                                            <div className="image">
-                                                <a href="shop-details.html"><img src="assets/img/nft/nft_avatar03.png" alt="img" /></a>
-                                            </div>
-                                            <div className="info">
-                                                <h6 className="name">Black Crypto</h6>
-                                                <a href="shop-details.html" className="userName">@Jon Max</a>
-                                            </div>
-                                        </div>
-                                        <div className="trendingNft__item-wish">
-                                            <a href="shop-details.html"><i className="far fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trendingNft__item-image">
-                                        <a href="shop-details.html"><img src="assets/img/nft/nft_img06.jpg" alt="img" /></a>
-                                    </div>
-                                    <div className="trendingNft__item-bottom">
-                                        <div className="trendingNft__item-price">
-                                            <span className="bid">Last Bid</span>
-                                            <h6 className="eth"><i className="fab fa-ethereum"></i> 1.005 <span>Eth</span></h6>
-                                        </div>
-                                        <a href="shop-details.html" className="bid-btn">Bid <i className="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="swiper-slide">
-                                <div className="trendingNft__item">
-                                    <div className="trendingNft__item-top">
-                                        <div className="trendingNft__item-avatar">
-                                            <div className="image">
-                                                <a href="shop-details.html"><img src="assets/img/nft/nft_avatar02.png" alt="img" /></a>
-                                            </div>
-                                            <div className="info">
-                                                <h6 className="name">Luck Crypto</h6>
-                                                <a href="shop-details.html" className="userName">@Jon Max</a>
-                                            </div>
-                                        </div>
-                                        <div className="trendingNft__item-wish">
-                                            <a href="shop-details.html"><i className="far fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trendingNft__item-image">
-                                        <a href="shop-details.html"><img src="assets/img/nft/nft_img07.jpg" alt="img" /></a>
-                                    </div>
-                                    <div className="trendingNft__item-bottom">
-                                        <div className="trendingNft__item-price">
-                                            <span className="bid">Last Bid</span>
-                                            <h6 className="eth"><i className="fab fa-ethereum"></i> 1.005 <span>Eth</span></h6>
-                                        </div>
-                                        <a href="shop-details.html" className="bid-btn">Bid <i className="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="swiper-slide">
-                                <div className="trendingNft__item">
-                                    <div className="trendingNft__item-top">
-                                        <div className="trendingNft__item-avatar">
-                                            <div className="image">
-                                                <a href="shop-details.html"><img src="assets/img/nft/nft_avatar03.png" alt="img" /></a>
-                                            </div>
-                                            <div className="info">
-                                                <h6 className="name">King Crypto</h6>
-                                                <a href="shop-details.html" className="userName">@Jon Max</a>
-                                            </div>
-                                        </div>
-                                        <div className="trendingNft__item-wish">
-                                            <a href="shop-details.html"><i className="far fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trendingNft__item-image">
-                                        <a href="shop-details.html"><img src="assets/img/nft/nft_img08.jpg" alt="img" /></a>
-                                    </div>
-                                    <div className="trendingNft__item-bottom">
-                                        <div className="trendingNft__item-price">
-                                            <span className="bid">Last Bid</span>
-                                            <h6 className="eth"><i className="fab fa-ethereum"></i> 1.005 <span>Eth</span></h6>
-                                        </div>
-                                        <a href="shop-details.html" className="bid-btn">Bid <i className="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+            <section className="social__area social-bg" data-background="assets/img/bg/social_bg.png">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-xl-6 col-lg-7 col-md-10">
+                        <div className="section__title text-center mb-60">
+                            <span className="sub-title tg__animate-text">connect with us</span>
+                            <h3 className="title">stay connected</h3>
                         </div>
                     </div>
                 </div>
-            </section> */}
-            {/* <!-- trending-nft-end --> */}
+                <div className="row justify-content-center gutter-20 row-cols-2 row-cols-lg-6 row-cols-md-4 row-cols-sm-3">
+                    <div className="col">
+                        <div className="social__item">
+                            <a href="#">
+                                <i className="flaticon-facebook"></i>
+                                <span>facebook</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="5" viewBox="0 0 65 5">
+                                    <path d="M968,5630h65l-4,5H972Z" transform="translate(-968 -5630)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="social__item">
+                            <a href="#">
+                                <i className="flaticon-twitter"></i>
+                                <span>twitter</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="5" viewBox="0 0 65 5">
+                                    <path d="M968,5630h65l-4,5H972Z" transform="translate(-968 -5630)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="social__item">
+                            <a href="#">
+                                <i className="flaticon-instagram"></i>
+                                <span>instagram</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="5" viewBox="0 0 65 5">
+                                    <path d="M968,5630h65l-4,5H972Z" transform="translate(-968 -5630)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="social__item">
+                            <a href="#">
+                                <i className="flaticon-youtube"></i>
+                                <span>youtube</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="5" viewBox="0 0 65 5">
+                                    <path d="M968,5630h65l-4,5H972Z" transform="translate(-968 -5630)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="social__item">
+                            <a href="#">
+                                <i className="flaticon-discord"></i>
+                                <span>discord</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="5" viewBox="0 0 65 5">
+                                    <path d="M968,5630h65l-4,5H972Z" transform="translate(-968 -5630)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="social__item">
+                            <a href="#">
+                                <i className="flaticon-twitch"></i>
+                                <span>twitch</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="5" viewBox="0 0 65 5">
+                                    <path d="M968,5630h65l-4,5H972Z" transform="translate(-968 -5630)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         </main>
     )

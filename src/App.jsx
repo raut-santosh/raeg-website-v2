@@ -14,6 +14,8 @@ import { LoaderProvider } from './contexts/LoaderContext';
 import Loader from './components/Loader';
 import TournamentDetails from './pages/TournamentDetails';
 import Profile from './pages/Profile';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 function App() {
 
@@ -33,6 +35,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsConditions />} />
         </Routes>
       <Footer />
       </BrowserRouter>

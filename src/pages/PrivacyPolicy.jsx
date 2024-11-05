@@ -1,0 +1,122 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+function PrivacyPolicy() {
+    return (
+        <main className="main--area">
+            <section className="breadcrumb-area breadcrumb__hide-img" data-background="assets/img/bg/breadcrumb_bg02.jpg">
+                <div className="container">
+                    <div className="breadcrumb__wrapper">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="breadcrumb__content">
+                                    <h2 className="title">Privacy Policy</h2>
+                                    <nav aria-label="breadcrumb">
+                                        <ol className="breadcrumb">
+                                            <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+                                            <li className="breadcrumb-item active" aria-current="page">Privacy Policy</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="tournament-area section-pt-120 section-pb-90">
+                <div className="container">
+                    <div className="tournament__wrapper">
+                        <div className="row justify-content-start">
+                            <div className="col-xl-12 col-lg-12 col-md-12">
+                                <div className="heading">
+                                    <h2>Privacy Policy</h2>
+                                    <strong>Last updated on 24-02-2024 19:27:20</strong>
+                                </div>
+                                <div className="conditions mt-5">
+                                    <p>This privacy policy (“Policy”) relates to the manner RAEGESPORTS PRIVATE LIMITED (“we”, “us”,
+                                        “our”) in which we use, handle and process the data that you provide us in connection with using the
+                                        products or services we offer. By using this website or by availing goods or services offered by us, you
+                                        agree to the terms and conditions of this Policy, and consent to our use, storage, disclosure, and transfer
+                                        of your information or data in the manner described in this Policy.</p>
+                                    <p>We are committed to ensuring that your privacy is protected in accordance with applicable laws and
+                                        regulations. We urge you to acquaint yourself with this Policy to familiarize yourself with the manner in
+                                        which your data is being handled by us.</p>
+                                    <p>RAEGESPORTS PRIVATE LIMITED may change this Policy periodically and we urge you to check
+                                        this page for the latest version of the Policy in order to keep yourself updated.</p>
+                                    <strong>What data is being collected</strong>
+                                    <p>We may collect the following information from you:</p>
+                                    <ul>
+                                        <li>Name</li>
+                                        <li>Contact information including address and email address</li>
+                                        <li>Demographic information or, preferences or interests</li>
+                                        <li>Personal Data or Other information relevant/ required for providing the goods or services to you</li>
+                                        <li>The meaning of Personal Data will be as defined under relevant Indian laws</li>
+                                    </ul>
+                                    <p><strong>Note:</strong> Notwithstanding anything under this Policy as required under applicable Indian laws, we will not
+                                        be storing any credit card, debit card or any other similar card data of yours. Please also note that all data
+                                        or information collected from you will be strictly in accordance with applicable laws and guidelines.</p>
+                                    <h4>What we do with the data we gather</h4>
+                                    <p>We require this data to provide you with the goods or services offered by us including but not limited, for
+                                        the below set out purposes:</p>
+                                    <ul>
+                                        <li>Internal record keeping.</li>
+                                        <li>For improving our products or services.</li>
+                                        <li>For providing updates to you regarding our products or services including any special offers.</li>
+                                        <li>To communicate information to you</li>
+                                        <li>For internal training and quality assurance purposes</li>
+                                    </ul>
+                                    <h4>Who do we share your data with</h4>
+                                    <p>We may share your information or data with:</p>
+                                    <ul>
+                                        <li>Third parties including our service providers in order to facilitate the provisions of goods or
+                                            services to you, carry out your requests, respond to your queries, fulfil your orders or for other
+                                            operational and business reasons.</li>
+                                        <li>With our group companies (to the extent relevant)</li>
+                                        <li>Our auditors or advisors to the extent required by them for performing their services</li>
+                                        <li>Governmental bodies, regulatory authorities, law enforcement authorities pursuant to our legal
+                                            obligations or compliance requirements.</li>
+                                    </ul>
+                                    <h4>How we use cookies</h4>
+                                    <p>We use "cookies" to collect information and to better understand customer behaviour. You can instruct
+                                        your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not
+                                        accept cookies, you may not be able to avail our goods or services to the full extent. We do not control
+                                        the use of cookies by third parties. The third party service providers have their own privacy policies
+                                        addressing how they use such information.</p>
+                                    <h4>Your rights relating to your data</h4>
+                                    <p><strong>Right to Review -</strong> You can review the data provided by you and can request us to correct or amend such
+                                        data (to the extent feasible, as determined by us). That said, we will not be responsible for the
+                                        authenticity of the data or information provided by you.</p>
+                                    <p><strong>Withdrawal of your Consent -</strong> You can choose not to provide your data, at any time while availing our
+                                        goods or services or otherwise withdraw your consent provided to us earlier, in writing to our email ID:
+                                        rohitakolkar02@gmail.comIn the event you choose to not provide or later withdraw your consent, we
+                                        may not be able to provide you our services or goods.Please note that these rights are subject to our
+                                        compliance with applicable laws.</p>
+                                    <h4>How long will we retain your information or data?</h4>
+                                    <p>We may retain your information or data (i) for as long as we are providing goods and services to you;
+                                        and (ii) as permitted under applicable law, we may also retain your data or information even after you
+                                        terminate the business relationship with us. However, we will process such information or data in
+                                        accordance with applicable laws and this Policy.</p>
+                                    <h4>Data Security</h4>
+                                    <p>We will use commercially reasonable and legally required precautions to preserve the integrity and
+                                        security of your information and data.</p>
+                                    <h4>The Refund will be processed in 7 Business Days</h4>
+                                    <p>You shall be entitled to claim a refund of the payment made by you in case we are not we are not able to provide the service. The timelines for such return and refund will be according to the specific service. you have availed or within the time period provided in our policies (as applicable). In case you you do not raise a refund claim within the stipulated time, than this would make you ineligible for a refund.</p>
+
+                                    <h4>Queries/ Grievance Officer</h4>
+                                    <p>For any queries, questions or grievances about this Policy, please contact us using the contact
+                                        information provided on this website.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    )
+}
+
+export default PrivacyPolicy

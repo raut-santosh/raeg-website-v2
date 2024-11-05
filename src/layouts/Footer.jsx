@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -35,13 +36,14 @@ function Footer() {
                     <div className="col-md-4 col-sm-5 order-0 order-md-2">
                         <div className="footer-el-widget text-start text-md-center widget_nav_menu">
                             <div className="footer-el-logo mb-35">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt="Mykd" /></a>
+                                <a href="index.html"><img src="assets/img/logo/logo1.png" alt="RAEG LOGO" /></a>
                             </div>
                             <div className="footer-el-menu">
                                 <ul className="list-wrap">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="tournament.html">Tournament</a></li>
+                                    <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                                    <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
+                                    <li><Link to="/contact">Help & Support</Link></li>
+                                    <li><Link to="/news">Our News</Link></li>
                                 </ul>
                             </div>
                         </div>

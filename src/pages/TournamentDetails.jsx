@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ApiService from '../services/ApiService'
 import { useLoader } from '../contexts/LoaderContext'
-import { formatDate } from '../utils/utils'
+import { formatDateMonthDateYear } from '../utils/utils'
 const apiService = new ApiService()
 
 function TournamentDetails() {
@@ -50,7 +50,7 @@ function TournamentDetails() {
                             <div className="blog-post-meta">
                                 <ul className="list-wrap">
                                     <li>By<a href="#">Admin</a></li>
-                                    <li><i className="far fa-calendar-alt"></i>{formatDate(tournament.date_updated)}</li>
+                                    <li><i className="far fa-calendar-alt"></i>{formatDateMonthDateYear(tournament.date_updated)}</li>
                                     <li><i className="far fa-comments"></i><a href="#">No comments</a></li>
                                 </ul>
                             </div>

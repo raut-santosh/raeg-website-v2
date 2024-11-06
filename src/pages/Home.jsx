@@ -51,7 +51,7 @@ function Home() {
     }, []);
 
     return (
-        <main className="main--area">
+        <main className="main--area main--home">
             {/* <!-- slider-area --> */}
             <section className="slider__area slider__bg" data-background="assets/img/slider/slider_bg.jpg">
                 <div className="slider-activee">

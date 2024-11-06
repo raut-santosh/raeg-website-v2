@@ -1,6 +1,15 @@
 // axiosInstance.js
 import axios from 'axios';
 
+// List of GET routes that don’t require an authorization token
+const routesWithoutToken = [
+  '/items/tournaments',
+  '/items/members',
+  '/items/games',
+  '/items/contests',
+  '/items/blogs',
+];
+
 // Create an Axios instance
 const axiosInstance = axios.create({
   baseURL: process.env.apiUrl, // Set your API base URL here
@@ -9,17 +18,22 @@ const axiosInstance = axios.create({
 // Add a request interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
-    // Get the token from local storage
-    const currentUserString = localStorage.getItem('currentUser');
-    const currentUser = currentUserString ? JSON.parse(currentUserString) : null; 
+    console.log('url: ',config.url)
+    // Check if the request method is GET and if the URL matches any routes that don’t need a token
+    const requiresToken = !(config.method === 'get' && routesWithoutToken.some(route => config.url.includes(route)));
 
+    if (requiresToken) {
+      // Get the token from local storage
+      const currentUserString = localStorage.getItem('currentUser');
+      const currentUser = currentUserString ? JSON.parse(currentUserString) : null;
+      const token = currentUser?.session?.access_token;
 
-    let token = currentUser.session.access_token;
-    // If the token exists, set the Authorization header
-    if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`;
+      // If the token exists, set the Authorization header
+      if (token) {
+        config.headers['Authorization'] = `Bearer ${token}`;
+      }
     }
-    
+
     return config; // Return the modified config
   },
   (error) => {
@@ -37,8 +51,9 @@ axiosInstance.interceptors.response.use(
   (error) => {
     // Handle 401 Unauthorized or other errors globally
     if (error.response && error.response.status === 401) {
-      // Handle unauthorized access (e.g., redirect to login)
       console.error('Unauthorized access - redirecting to login');
+      localStorage.clear();
+      window.location.href = '/login';
       // Add your logout logic or redirect here
     }
     return Promise.reject(error);

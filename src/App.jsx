@@ -16,6 +16,7 @@ import TournamentDetails from './pages/TournamentDetails';
 import Profile from './pages/Profile';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+import BlogDetails from './pages/BlogDetails';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/tournaments" element={<Tournaments />} />
           <Route path="/tournaments/:id" element={<TournamentDetails />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />

@@ -18,3 +18,18 @@
 .customer__form-wrap{
     border: 2px solid #45f882;
 }
+
+.nav-profile-img{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-profile-link{
+    min-width: 70px;
+    padding: 10px;
+}
+
+.main--home{
+    overflow: hidden;
+}
